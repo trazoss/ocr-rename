@@ -28,7 +28,7 @@ for (const filename of filenames) {
   const croppedImagePath = path.join(tmpDir, filename);
   // create cropped image
   execaCommandSync(
-    `convert -resize 250% -type Grayscale -gravity NorthEast -crop 100x5%x+0+0 `
+    `convert -resize 250% -gravity NorthEast -crop 100x5%x+0+0 `
     + `${sourceImagePath} ${croppedImagePath}`
   );
   console.log('Cropped: ' + croppedImagePath);
